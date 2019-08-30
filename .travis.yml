@@ -18,7 +18,7 @@ deploy:
   committer-from-gh: true
   skip-cleanup: true
   keep-history: true
-  local-dir: static
+  local-dir: build
   target-branch: master
   on:
     branch: master
