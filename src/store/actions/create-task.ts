@@ -1,15 +1,19 @@
-export const CREATE_TASK = 'start-app';
+export const CREATE_TASK = 'create-task';
 
 export type CreateTaskAction = {
   type: typeof CREATE_TASK;
   payload: {
-
+    title: string;
+    listId: string;
   }
 };
 
-export const createTask = (): CreateTaskAction => {
+export const createTask = (title: string, listId: string): CreateTaskAction => {
   return {
     type: CREATE_TASK,
-    payload: {}
+    payload: {
+      title,
+      listId
+    }
   };
 };

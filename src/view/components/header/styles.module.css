@@ -1,0 +1,11 @@
+.header {
+  background: rgba(0,0,0,.15);
+  padding: 4px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+}
