@@ -17,8 +17,6 @@ deploy:
   github-token: $GITHUB_TOKEN
   committer-from-gh: true
   skip-cleanup: true
-  keep-history: true
   local-dir: build
-  target-branch: gh-pages
   on:
     branch: master
