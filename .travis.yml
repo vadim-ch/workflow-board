@@ -19,7 +19,6 @@ deploy:
   skip-cleanup: true
   keep-history: true
   local-dir: build
-  target-branch: master
+  target-branch: gh-pages
   on:
     branch: master
-    target_branch: gh-pages
