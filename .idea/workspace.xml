@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="871789b0-8f12-445b-aae2-d573ea2dbd99" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -30,7 +30,7 @@
           <entry key="gitignore" value="1" />
           <entry key="html" value="4" />
           <entry key="ico" value="1" />
-          <entry key="json" value="4" />
+          <entry key="json" value="5" />
           <entry key="svg" value="1" />
           <entry key="ts" value="90" />
           <entry key="tsx" value="63" />
@@ -43,7 +43,7 @@
           <entry key="CSS" value="43" />
           <entry key="HTML" value="4" />
           <entry key="Image" value="1" />
-          <entry key="JSON" value="3" />
+          <entry key="JSON" value="4" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="SVG" value="1" />
           <entry key="TypeScript" value="90" />
@@ -61,7 +61,8 @@
         <counts>
           <entry key="css" value="395" />
           <entry key="gitignore" value="6" />
-          <entry key="json" value="2" />
+          <entry key="html" value="2" />
+          <entry key="json" value="8" />
           <entry key="ts" value="2906" />
           <entry key="tsx" value="4366" />
           <entry key="yml" value="30" />
@@ -70,7 +71,8 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="395" />
-          <entry key="JSON" value="2" />
+          <entry key="HTML" value="2" />
+          <entry key="JSON" value="8" />
           <entry key="PLAIN_TEXT" value="6" />
           <entry key="TypeScript" value="2906" />
           <entry key="TypeScript JSX" value="4366" />
@@ -95,11 +97,20 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/.travis.yml">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="234">
                   <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/package.json">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="68">
+                  <caret line="4" column="57" selection-start-line="4" selection-start-column="57" selection-end-line="4" selection-end-column="57" />
                 </state>
               </provider>
             </entry>
@@ -111,7 +122,11 @@
           </file>
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/build/index.html">
-              <provider selected="true" editor-type-id="text-editor" />
+              <provider selected="true" editor-type-id="text-editor">
+                <state>
+                  <caret column="2045" selection-start-column="2045" selection-end-column="2045" />
+                </state>
+              </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
@@ -241,9 +256,11 @@
       <find>&lt;Editor</find>
       <find>Draggable</find>
       <find>State</find>
+      <find>/static</find>
     </findStrings>
     <replaceStrings>
       <replace>'</replace>
+      <replace>./static</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -252,7 +269,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/view/components/lists/styles.module.css" />
         <option value="$PROJECT_DIR$/src/view/components/lists/index.tsx" />
         <option value="$PROJECT_DIR$/src/view/components/listWrapper/styles.module.css" />
         <option value="$PROJECT_DIR$/src/view/components/ListContent/styles.module.css" />
@@ -262,7 +278,6 @@
         <option value="$PROJECT_DIR$/src/view/components/list/styles.module.css" />
         <option value="$PROJECT_DIR$/src/store/reducers/domain/lists/index.ts" />
         <option value="$PROJECT_DIR$/src/view/containers/list/styles.module.css" />
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/view/components/wrapper/index.tsx" />
         <option value="$PROJECT_DIR$/src/view/components/button/index.tsx" />
         <option value="$PROJECT_DIR$/.gitignore" />
@@ -303,6 +318,8 @@
         <option value="$PROJECT_DIR$/src/store/middlewares/tasks-middleware/index.ts" />
         <option value="$PROJECT_DIR$/src/utils/index.ts" />
         <option value="$PROJECT_DIR$/.travis.yml" />
+        <option value="$PROJECT_DIR$/build/index.html" />
+        <option value="$PROJECT_DIR$/package.json" />
       </list>
     </option>
   </component>
@@ -434,11 +451,6 @@
               <item name="task-board" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="task-board" type="b2602c69:ProjectViewProjectNode" />
-              <item name="task-board" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -494,12 +506,12 @@
       <workItem from="1567105153984" duration="8694000" />
       <workItem from="1567149684195" duration="24852000" />
       <workItem from="1567176852815" duration="6184000" />
-      <workItem from="1567183701571" duration="15540000" />
+      <workItem from="1567183701571" duration="16417000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55270000" />
+    <option name="totallyTimeSpent" value="56147000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -514,7 +526,7 @@
     <frame x="0" y="25" width="1680" height="1025" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13157895" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13157895" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="DB Browser" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -529,7 +541,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="DB Execution Console" order="9" />
       <window_info anchor="bottom" id="TypeScript" order="10" weight="0.32873562" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.445977" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.445977" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -667,13 +679,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="177" column="4" selection-start-line="177" selection-start-column="4" selection-end-line="177" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="2" column="21" lean-forward="true" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -947,13 +952,24 @@
     <entry file="file://$PROJECT_DIR$/public/index.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/build/index.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/.travis.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
           <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="2045" selection-start-column="2045" selection-end-column="2045" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="57" selection-start-line="4" selection-start-column="57" selection-end-line="4" selection-end-column="57" />
         </state>
       </provider>
     </entry>

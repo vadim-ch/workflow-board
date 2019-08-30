@@ -2,6 +2,7 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://vadim-ch.github.io/workflow-board/",
   "dependencies": {
     "classnames": "^2.2.6",
     "react": "^16.9.0",
