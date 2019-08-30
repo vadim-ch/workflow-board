@@ -1,35 +1,17 @@
 import { CREATE_TASK, CreateTaskAction } from '../../../actions/create-task';
-import { generateId, normalizeById } from '../../../../utils';
+import { normalizeById } from '../../../../utils';
 import { MOVE_TASK, MoveTaskAction } from '../../../actions/move-task';
 
 
 const initialState = {
-  byId: {
-    '1': {
-      id: '1',
-      title: 'Приготовить суп',
-      listId: '1'
-    },
-    '2': {
-      id: '2',
-      title: 'Пожарить картошку',
-      listId: '1'
-    },
-    '3': {
-      id: '3',
-      title: 'Выбросить мусор',
-      listId: '3'
-    }
-  },
-  allIds: [
-      '1', '2', '3'
-  ]
+  byId: {},
+  allIds: []
 };
 
 export type TaskType = {
   id: string;
   title: string;
-  listId: string;
+  columnId: string;
 }
 
 export interface TasksState {
@@ -54,16 +36,12 @@ export function tasks(
 ): TasksState {
   switch (action.type) {
     case CREATE_TASK: {
-      const task = {
-        id: generateId(),
-        ...action.payload
-      };
-      return normalizeTasks([task], state);
+      return normalizeTasks([action.payload as TaskType], state);
     }
     case MOVE_TASK: {
       const task = {
         ...state.byId[action.payload.id],
-        listId: action.payload.listId
+        columnId: action.payload.columnToId
       };
       return normalizeTasks([task], state);
     }

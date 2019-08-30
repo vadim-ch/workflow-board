@@ -1,4 +1,5 @@
-.editor {
+.task {
+  padding: 6px;
   background-color: #fff;
   border-radius: 3px;
   box-shadow: 0 1px 0 rgba(9,30,66,.25);
@@ -9,14 +10,5 @@
   min-height: 20px;
   position: relative;
   text-decoration: none;
-}
-
-.editor > textarea {
-  border: 0;
-  padding: 6px;
-  width: 100%;
-  box-sizing: border-box;
-  resize: none;
-  height: 100%;
-  outline: none;
+  word-break: break-word;
 }

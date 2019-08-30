@@ -7,11 +7,17 @@ type Props = {
 }
 
 export const Editor: React.FC<Props> = ({value, onChange}) => {
+  const textarea = React.createRef<any>();
+  React.useEffect(() => {
+    textarea.current.focus();
+  });
   return (
-      <div>
+      <div className={styles.editor}>
         <textarea
+            ref={textarea}
             value={value}
             onChange={(event) => onChange(event.target.value)}
+            placeholder="Ввести заголовок"
         />
       </div>
   )

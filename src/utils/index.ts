@@ -1,5 +1,3 @@
-import { ListType } from '../store/reducers/domain/lists';
-
 const uuidv4 = require('uuid/v4');
 
 export const generateId = () => {

@@ -1,13 +1,13 @@
 import { combineReducers } from 'redux';
 import { TasksState, tasks } from './tasks';
-import { ListsState, lists } from './lists';
+import { ColumnState, column } from './column';
 
 export interface DomainState {
   tasks: TasksState;
-  lists: ListsState;
+  column: ColumnState;
 }
 
 export const domainState = combineReducers<DomainState>({
   tasks,
-  lists
+  column,
 });

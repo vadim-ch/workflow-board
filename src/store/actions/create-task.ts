@@ -3,17 +3,18 @@ export const CREATE_TASK = 'create-task';
 export type CreateTaskAction = {
   type: typeof CREATE_TASK;
   payload: {
+    id?: string;
     title: string;
-    listId: string;
+    columnId: string;
   }
 };
 
-export const createTask = (title: string, listId: string): CreateTaskAction => {
+export const createTask = (title: string, columnId: string): CreateTaskAction => {
   return {
     type: CREATE_TASK,
     payload: {
       title,
-      listId
+      columnId
     }
   };
 };

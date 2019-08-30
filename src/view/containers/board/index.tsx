@@ -4,22 +4,25 @@ import { bindActionCreators } from 'redux';
 import { State } from '../../../store/reducers';
 import { createTask } from '../../../store/actions/create-task';
 import { createList } from '../../../store/actions/create-list';
-import { getAvailableLists } from '../../../store/reducers/domain/lists/selectors';
-import { ListType } from '../../../store/reducers/domain/lists';
-import { TableWrapper } from '../../components/table-wrapper';
-import { Card } from '../../components/card';
-import List from '../list';
-import { TaskCreator } from '../../components/task-creator';
+import { getColumnList } from '../../../store/reducers/domain/column/selectors';
+import { ColumnType } from '../../../store/reducers/domain/column';
+import { BoardContainer } from '../../components/table-wrapper';
+import { Column } from '../../components/column';
 
 import styles from './styles.module.css';
+import { getTasksByListId, TaskByListType } from '../../../store/reducers/domain/tasks/selectors';
+import { moveTask } from '../../../store/actions/move-task';
+import { DragDropContext } from 'react-beautiful-dnd';
 
 type ActionsMap = {
-  createTask: typeof createTask,
-  createList: typeof createList
+  createTask: typeof createTask;
+  createList: typeof createList;
+  moveTask: typeof moveTask;
 }
 
 export interface IStateProps {
-  lists: Array<ListType>;
+  columns: Array<ColumnType>;
+  tasks: TaskByListType;
 }
 
 export interface IDispatchProps {
@@ -30,34 +33,59 @@ type IPropsComponents = IStateProps & IDispatchProps;
 
 class Board extends React.PureComponent<IPropsComponents, {}> {
   public render(): JSX.Element {
+    const {columns, actions, tasks} = this.props;
     return (
         <div className={styles.board}>
-          <TableWrapper elements={this.renderLists()}/>
+          <DragDropContext onDragEnd={this.onDragEnd}>
+            <BoardContainer>
+              {columns.map(column => (
+                  <Column
+                      key={column.id}
+                      column={column}
+                      tasks={tasks[column.id]}
+                      createTask={actions.createTask}
+                  />
+              ))}
+            </BoardContainer>
+          </DragDropContext>
         </div>
     );
   }
 
-  private renderLists(): Array<JSX.Element> {
-    const { lists, actions } = this.props;
-    return lists.map(list => (
-        <Card title={list.title}>
-          <List listId={list.id}/>
-          <TaskCreator createTask={(text) => actions.createTask(text, list.id)}/>
-        </Card>
-    ));
+  private onDragEnd = (result: any) => {
+    const {destination, source, draggableId} = result;
+    const {actions} = this.props;
+
+    if (!destination) {
+      return;
+    }
+
+    if (destination.droppableId === source.droppableId &&
+        destination.index === source.index) {
+      return;
+    }
+    actions.moveTask(
+        draggableId,
+        source.droppableId,
+        destination.droppableId,
+        source.index,
+        destination.index
+    );
   }
 }
 
 const mapStateToProps = (state: State): IStateProps => {
   return {
-    lists: getAvailableLists(state)
+    columns: getColumnList(state),
+    tasks: getTasksByListId(state)
   };
 };
 
 const mapDispatchToProps = (dispatch: any): IDispatchProps => ({
   actions: bindActionCreators({
     createTask,
-    createList
+    createList,
+    moveTask
   }, dispatch)
 });
 

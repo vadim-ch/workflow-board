@@ -21,8 +21,10 @@ export const TaskCreator: React.FC<Props> = ({createTask}) => {
         {editMode ?
             <div>
               <Editor value={text} onChange={setText}/>
-              <Button handler={text !== '' ? createHandler : null}>Создать задачу</Button>
-              <Button handler={() => setEditMode(false)} type={ButtonType.Simple}>X</Button>
+              <div className={styles.buttonList}>
+                <Button handler={text !== '' ? createHandler : null}>Создать задачу</Button>
+                <Button handler={() => setEditMode(false)} type={ButtonType.Simple}>X</Button>
+              </div>
             </div> :
             <Button handler={() => setEditMode(true)} type={ButtonType.Simple}>Создать ещё одну задачу</Button>
         }

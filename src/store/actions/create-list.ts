@@ -1,15 +1,15 @@
-export const CREATE_LIST = 'create-list';
+export const CREATE_COLUMN = 'create-column';
 
-export type CreateListAction = {
-  type: typeof CREATE_LIST;
+export type CreateColumnAction = {
+  type: typeof CREATE_COLUMN;
   payload: {
 
   }
 };
 
-export const createList = (): CreateListAction => {
+export const createList = (): CreateColumnAction => {
   return {
-    type: CREATE_LIST,
+    type: CREATE_COLUMN,
     payload: {}
   };
 };
