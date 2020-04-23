@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/workflow-board/static/css/main.8343939b.chunk.css",
+    "main.js": "/workflow-board/static/js/main.2ebf03ab.chunk.js",
+    "main.js.map": "/workflow-board/static/js/main.2ebf03ab.chunk.js.map",
+    "runtime~main.js": "/workflow-board/static/js/runtime~main.cda9c3ef.js",
+    "runtime~main.js.map": "/workflow-board/static/js/runtime~main.cda9c3ef.js.map",
+    "static/js/2.4d0c7390.chunk.js": "/workflow-board/static/js/2.4d0c7390.chunk.js",
+    "static/js/2.4d0c7390.chunk.js.map": "/workflow-board/static/js/2.4d0c7390.chunk.js.map",
+    "index.html": "/workflow-board/index.html",
+    "precache-manifest.85655e2bb6d2d189a29fb05004f439d7.js": "/workflow-board/precache-manifest.85655e2bb6d2d189a29fb05004f439d7.js",
+    "service-worker.js": "/workflow-board/service-worker.js",
+    "static/css/main.8343939b.chunk.css.map": "/workflow-board/static/css/main.8343939b.chunk.css.map"
+  }
+}
